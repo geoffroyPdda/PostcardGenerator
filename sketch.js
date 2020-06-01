@@ -25,11 +25,11 @@ let newButton;
 
 function preload() {
   accessoiresList[0] = loadImage("[]data/accessoires/COCKTAIL.png");
-  accessoiresList[1] = loadImage("https://github.com/geoffroyPdda/geoffroyPdda.github.io/blob/master/data/accessoires/GLACE.png");
-  accessoiresList[2] = loadImage("https://github.com/geoffroyPdda/geoffroyPdda.github.io/blob/master/data/accessoires/COQUILLAGE.png");
-  accessoiresList[3] = loadImage("https://github.com/geoffroyPdda/geoffroyPdda.github.io/blob/master/data/accessoires/COQUILLAGE2.png");
-  accessoiresList[4] = loadImage("https://github.com/geoffroyPdda/geoffroyPdda.github.io/blob/master/data/accessoires/ETOILE.png");
-  accessoiresList[5] = loadImage("https://github.com/geoffroyPdda/geoffroyPdda.github.io/blob/master/data/accessoires/PALMIER.png");
+  accessoiresList[1] = loadImage("[]data/accessoires/GLACE.png");
+  accessoiresList[2] = loadImage("[]data/accessoires/COQUILLAGE.png");
+  accessoiresList[3] = loadImage("[]data/accessoires/COQUILLAGE2.png");
+  accessoiresList[4] = loadImage("[]data/accessoires/ETOILE.png");
+  accessoiresList[5] = loadImage("[]data/accessoires/PALMIER.png");
   accessoiresList[6] = loadImage("https://github.com/geoffroyPdda/geoffroyPdda.github.io/blob/master/data/accessoires/PARASOL2.png");
   accessoiresList[7] = loadImage("https://github.com/geoffroyPdda/geoffroyPdda.github.io/blob/master/data/accessoires/SOLEIL.png");
   accessoiresList[8] = loadImage("https://github.com/geoffroyPdda/geoffroyPdda.github.io/blob/master/data/accessoires/SUNSET.png");
