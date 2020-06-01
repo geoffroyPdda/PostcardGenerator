@@ -24,7 +24,7 @@ let newButton;
 
 
 function preload() {
-  accessoiresList[0] = loadImage("https://github.com/geoffroyPdda/geoffroyPdda.github.io/blob/master/data/accessoires/COCKTAIL.png");
+  accessoiresList[0] = loadImage("[]data/accessoires/COCKTAIL.png");
   accessoiresList[1] = loadImage("https://github.com/geoffroyPdda/geoffroyPdda.github.io/blob/master/data/accessoires/GLACE.png");
   accessoiresList[2] = loadImage("https://github.com/geoffroyPdda/geoffroyPdda.github.io/blob/master/data/accessoires/COQUILLAGE.png");
   accessoiresList[3] = loadImage("https://github.com/geoffroyPdda/geoffroyPdda.github.io/blob/master/data/accessoires/COQUILLAGE2.png");
