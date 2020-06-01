@@ -37,6 +37,12 @@ function preload() {
   accessoiresList[9] = loadImage("/data/Accessoires/SURF.png");
   accessoiresList[10] = loadImage("/data/Accessoires/TRANSAT.png");
 
+  backgroundsList[0] = loadImage('/data/bg/CIEL.png');
+  backgroundsList[1] = loadImage('/data/bg/CIEL2.png');
+  backgroundsList[2] = loadImage('/data/bg/CIEL3.png');
+  backgroundsList[3] = loadImage('/data/bg/FOND SUNSET.png');
+  backgroundsList[4] = loadImage('/data/bg/MER.png');
+  backgroundsList[5] = loadImage('/data/bg/SABLE.png');
 
   principalesList[0] = loadImage('/data/principal/ARNOLD.png');
   principalesList[1] = loadImage('/data/principal/BITE.png');
