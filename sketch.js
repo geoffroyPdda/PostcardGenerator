@@ -89,11 +89,11 @@ function setup() {
   //-----------------------------
   createCanvas(750, 500, WEBGL);
   dlButton = createButton('C\'est toi que je veux !');
-  dlButton.position(windowWidth/3, height + 20);
+  dlButton.position(windowWidth/2 - width/2, height + 20);
   dlButton.mousePressed(savePostcard);
   
   newButton = createButton('Give me une autre !');
-  newButton.position(2/3*windowWidth, height + 20);
+  newButton.position(windowWidth/2 + width/2 - newButton.size().width, height + 20);
   newButton.mousePressed(newPostcard);
 
 
@@ -112,8 +112,8 @@ function setup() {
 }
 
 function windowResized() {
-  dlButton.position(windowWidth/3, height + 20);
-  newButton.position(2/3*windowWidth, height + 20);
+  dlButton.position(windowWidth/2 - width/2, height + 20);
+  newButton.position(windowWidth/2 + width/2 - newButton.size().width, height + 20);
 }
 
 function draw() {
