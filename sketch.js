@@ -24,6 +24,19 @@ let newButton;
 
 
 function preload() {
+  
+  accessoiresList[0] = loadImage("/data/Accessoires/COCKTAIL.png");
+  accessoiresList[1] = loadImage("/data/Accessoires/GLACE.png");
+  accessoiresList[2] = loadImage("/data/Accessoires/COQUILLAGE.png");
+  accessoiresList[3] = loadImage("/data/Accessoires/COQUILLAGE2.png");
+  accessoiresList[4] = loadImage("/data/Accessoires/ETOILE.png");
+  accessoiresList[5] = loadImage("/data/Accessoires/PALMIER.png");
+  accessoiresList[6] = loadImage("/data/Accessoires/PARASOL2.png");
+  accessoiresList[7] = loadImage("/data/Accessoires/SOLEIL.png");
+  accessoiresList[8] = loadImage("/data/Accessoires/SUNSET.png");
+  accessoiresList[9] = loadImage("/data/Accessoires/SURF.png");
+  accessoiresList[10] = loadImage("/data/Accessoires/TRANSAT.png");
+
 
   principalesList[0] = loadImage('/data/principal/ARNOLD.png');
   principalesList[1] = loadImage('/data/principal/BITE.png');
