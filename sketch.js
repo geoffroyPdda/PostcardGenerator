@@ -87,7 +87,7 @@ function setup() {
   //-----------------------------
   //   Display for User
   //-----------------------------
-  createCanvas(750, 500, WEBGL);
+  createCanvas(750, 500);//, WEBGL);
   dlButton = createButton('C\'est toi que je veux !');
   dlButton.position(windowWidth/2 - width/2, height + 20);
   dlButton.mousePressed(savePostcard);
@@ -120,7 +120,7 @@ function draw() {
   background(220, 20, 100);
 
   //move origin to up Left corner
-  translate(-width / 2, -height / 2, 0);
+  //translate(-width / 2, -height / 2, 0);
 
   //COMPOSITION
   bg.compose(backgroundsList, render);
