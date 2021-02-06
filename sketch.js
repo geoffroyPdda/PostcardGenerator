@@ -155,6 +155,7 @@ function preload() {
         principalesListWinter[13] = loadImage('data/winter/principal/SKI SEXY 3.png');
         principalesListWinter[14] = loadImage('data/winter/principal/SKI SEXY.png');
         principalesListWinter[15] = loadImage('data/winter/principal/TRIO SKI.png');
+        principalesListWinter[15] = loadImage('data/winter/principal/boobs.png');
 
         fontsListWinter[0] = loadImage('data/winter/typo/1.png');
         fontsListWinter[1] = loadImage('data/winter/typo/2.png');
