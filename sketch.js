@@ -107,13 +107,15 @@ function preload() {
         accessoiresListWinter[1] = loadImage("data/winter/accessoires/bonnet.png");;
         accessoiresListWinter[2] = loadImage("data/winter/accessoires/chartreuse.png");;
         accessoiresListWinter[3] = loadImage("data/winter/accessoires/flocon.png");;
-        accessoiresListWinter[4] = loadImage("data/winter/accessoires/Montagne.png");;
-        accessoiresListWinter[5] = loadImage("data/winter/accessoires/montagne2.png");;
-        accessoiresListWinter[6] = loadImage("data/winter/accessoires/oeufs.png");;
-        accessoiresListWinter[7] = loadImage("data/winter/accessoires/piste.png");;
-        accessoiresListWinter[8] = loadImage("data/winter/accessoires/raclette.png");;
-        accessoiresListWinter[9] = loadImage("data/winter/accessoires/sapin bleu.png");;
-        accessoiresListWinter[10] = loadImage("data/winter/accessoires/skis.png");;
+        accessoiresListWinter[4] = loadImage("data/winter/accessoires/montagne2.png");;
+        accessoiresListWinter[5] = loadImage("data/winter/accessoires/oeufs.png");;
+        accessoiresListWinter[6] = loadImage("data/winter/accessoires/piste.png");;
+        accessoiresListWinter[7] = loadImage("data/winter/accessoires/raclette.png");;
+        accessoiresListWinter[8] = loadImage("data/winter/accessoires/sapin bleu.png");;
+        accessoiresListWinter[9] = loadImage("data/winter/accessoires/skis.png");; 
+        // accessoiresListWinter[10] = loadImage("data/winter/accessoires/DECORS part1.png");; 
+        // accessoiresListWinter[11] = loadImage("data/winter/accessoires/DECORS part2.png");; 
+        // accessoiresListWinter[12] = loadImage("data/winter/accessoires/NEIGE part1.png");; 
 
         backgroundsListWinter[0] = loadImage('data/winter/bg/IMG_0071.JPG');
         backgroundsListWinter[1] = loadImage('data/winter/bg/IMG_0072.JPG');
@@ -502,7 +504,7 @@ class Accessories {
     compose(imgList, render) {
         this.imgSelected = [];
 
-        let nbrAccess = random(4) + 1;
+        let nbrAccess = random(2) + 3;
 
         let minScale = 0.3;
         let maxScale = 1.0;
