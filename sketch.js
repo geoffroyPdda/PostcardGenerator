@@ -105,7 +105,7 @@ function preload() {
 
         accessoiresListWinter[0] = loadImage("data/winter/accessoires/Bonhomme de neige.png");;
         accessoiresListWinter[1] = loadImage("data/winter/accessoires/bonnet.png");;
-        accessoiresListWinter[2] = loadImage("data/winter/accessoires/Etoile.png");;
+        accessoiresListWinter[2] = loadImage("data/winter/accessoires/chartreuse.png");;
         accessoiresListWinter[3] = loadImage("data/winter/accessoires/flocon.png");;
         accessoiresListWinter[4] = loadImage("data/winter/accessoires/Montagne.png");;
         accessoiresListWinter[5] = loadImage("data/winter/accessoires/montagne2.png");;
@@ -113,21 +113,29 @@ function preload() {
         accessoiresListWinter[7] = loadImage("data/winter/accessoires/piste.png");;
         accessoiresListWinter[8] = loadImage("data/winter/accessoires/raclette.png");;
         accessoiresListWinter[9] = loadImage("data/winter/accessoires/sapin bleu.png");;
-        accessoiresListWinter[9] = loadImage("data/winter/accessoires/skis.png");;
+        accessoiresListWinter[10] = loadImage("data/winter/accessoires/skis.png");;
 
-        backgroundsListWinter[0] = loadImage('data/winter/bg/DECORS part1.PNG');
-        backgroundsListWinter[1] = loadImage('data/winter/bg/DECORS part2.PNG');
-        backgroundsListWinter[2] = loadImage('data/winter/bg/DECORS.PNG');
-        backgroundsListWinter[3] = loadImage('data/winter/bg/IMG_0071.JPG');
-        backgroundsListWinter[4] = loadImage('data/winter/bg/IMG_0072.JPG');
-        backgroundsListWinter[5] = loadImage('data/winter/bg/IMG_0073.JPG');
-        backgroundsListWinter[6] = loadImage('data/winter/bg/IMG_0074.JPG');
-        backgroundsListWinter[7] = loadImage('data/winter/bg/IMG_0075.JPG');
-        backgroundsListWinter[8] = loadImage('data/winter/bg/IMG_0076.JPG');
-        backgroundsListWinter[9] = loadImage('data/winter/bg/IMG_0077.JPG');
-        backgroundsListWinter[10] = loadImage('data/winter/bg/NEIGE part1.PNG');
-        backgroundsListWinter[11] = loadImage('data/winter/bg/NEIGE part2.PNG');
-        backgroundsListWinter[12] = loadImage('data/winter/bg/NEIGE.PNG');
+        backgroundsListWinter[0] = loadImage('data/winter/bg/IMG_0071.JPG');
+        backgroundsListWinter[1] = loadImage('data/winter/bg/IMG_0072.JPG');
+        backgroundsListWinter[2] = loadImage('data/winter/bg/IMG_0073.JPG');
+        backgroundsListWinter[3] = loadImage('data/winter/bg/IMG_0074.JPG');
+        backgroundsListWinter[4] = loadImage('data/winter/bg/IMG_0075.JPG');
+        backgroundsListWinter[5] = loadImage('data/winter/bg/IMG_0076.JPG');
+        backgroundsListWinter[6] = loadImage('data/winter/bg/IMG_0077.JPG');
+
+        // backgroundsListWinter[0] = loadImage('data/winter/bg/DECORS part1.PNG');
+        // backgroundsListWinter[1] = loadImage('data/winter/bg/DECORS part2.PNG');
+        // backgroundsListWinter[2] = loadImage('data/winter/bg/DECORS.PNG');
+        // backgroundsListWinter[3] = loadImage('data/winter/bg/IMG_0071.JPG');
+        // backgroundsListWinter[4] = loadImage('data/winter/bg/IMG_0072.JPG');
+        // backgroundsListWinter[5] = loadImage('data/winter/bg/IMG_0073.JPG');
+        // backgroundsListWinter[6] = loadImage('data/winter/bg/IMG_0074.JPG');
+        // backgroundsListWinter[7] = loadImage('data/winter/bg/IMG_0075.JPG');
+        // backgroundsListWinter[8] = loadImage('data/winter/bg/IMG_0076.JPG');
+        // backgroundsListWinter[9] = loadImage('data/winter/bg/IMG_0077.JPG');
+        // backgroundsListWinter[10] = loadImage('data/winter/bg/NEIGE part1.PNG');
+        // backgroundsListWinter[11] = loadImage('data/winter/bg/NEIGE part2.PNG');
+        // backgroundsListWinter[12] = loadImage('data/winter/bg/NEIGE.PNG');
 
         principalesListWinter[0] = loadImage('data/winter/principal/CAGOLES ALCOOLIQUES.png');
         principalesListWinter[1] = loadImage('data/winter/principal/DIANA.png');
@@ -189,7 +197,10 @@ function setup() {
     renderBack = createGraphics(1500, 1000);
 
     accessoires = new Accessories();
-    bg = new Background();
+    if (isSummer) bg = new Background();
+    else bg = new FondColore();
+
+
     cadre = new Cadre();
     principal = new Principal();
     typography = new Typography();
@@ -220,8 +231,8 @@ function draw() {
     bg.display(render);
     accessoires.display(render);
     principal.display(render);
-    cadre.displayCadre(render);
     typography.display(render);
+    cadre.displayCadre(render);
 
     image(render, 0, 0, width, height);
 
@@ -240,9 +251,7 @@ function savePostcard() {
 
     saveCanvas(render, 'Sea, Sex, and Sun - ' + year() + '.' + month() + '.' + day() + ' - ' + hour() + '.' + minute() + '.' + second(), 'png');
     saveCanvas(renderBack, 'Back - ' + year() + '.' + month() + '.' + day() + ' - ' + hour() + '.' + minute() + '.' + second(), 'png');
-
 }
-
 
 
 
@@ -320,6 +329,10 @@ class PImageExtended {
     displayTrail() {
     }
 
+    translate(){
+        this.translate = createVector(random(render.width), random(render.height));
+    }
+
     scale(sc, render) {
         this.sc = sc;
         this.img.resize(int(this.sc * this.img.width), 0);
@@ -335,6 +348,7 @@ class PImageExtended {
         render.image(this.img, 0, 0);
         render.pop();
     }
+
 }
 
 
@@ -448,7 +462,7 @@ class Background {
     compose(bgList, render) {
         this.bgSelected = [];
         this.bgSelected[0] = new PImageExtended(random(bgList).get(), render);
-        this.bgSelected[0].rotation(TWO_PI, render);
+        //this.bgSelected[0].rotation(TWO_PI, render);
     }
 
     display(render) {
@@ -456,6 +470,28 @@ class Background {
     }
 }
 
+
+class FondColore {
+
+    constructor() {
+
+        this.fondSelected = [];
+        this.nbrFond = 1;
+    }
+
+    compose(fondList) {
+
+        this.fondSelected = [];
+        this.fondSelected[0] = random(fondList);
+    }
+
+    display(render) {
+        render.push();
+        render.imageMode(CORNER);
+        render.image(this.fondSelected[0], 0, 0);
+        render.pop();
+    }
+}
 
 
 class Accessories {
