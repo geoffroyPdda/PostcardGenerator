@@ -251,7 +251,8 @@ function savePostcard() {
     renderBack.image(back, 0, 0);
     cadre.displayCadre(renderBack);
 
-    saveCanvas(render, 'Sea, Sex, and Sun - ' + year() + '.' + month() + '.' + day() + ' - ' + hour() + '.' + minute() + '.' + second(), 'png');
+    if (isSummer) saveCanvas(render, 'Sea, Sex, and Sun - ' + year() + '.' + month() + '.' + day() + ' - ' + hour() + '.' + minute() + '.' + second(), 'png');
+    else saveCanvas(render, 'In Tartiflette We Trust - ' + year() + '.' + month() + '.' + day() + ' - ' + hour() + '.' + minute() + '.' + second(), 'png');
     saveCanvas(renderBack, 'Back - ' + year() + '.' + month() + '.' + day() + ' - ' + hour() + '.' + minute() + '.' + second(), 'png');
 }
 
