@@ -34,7 +34,7 @@ let renderBack;
 let dlButton;
 let newButton;
 
-isSummer = false;
+isSummer = true;
 isWinter = !isSummer;
 
 function preload() {
